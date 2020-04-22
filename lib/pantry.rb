@@ -14,9 +14,7 @@ class Pantry
       end
   end
 
-  def restock
-
+  def restock(ingredient, count)
+    stock[ingredient] += count
   end
-
-
 end
