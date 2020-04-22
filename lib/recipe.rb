@@ -1,7 +1,8 @@
 class Recipe
 
   attr_reader :name,
-              :ingredients_required
+              :ingredients_required,
+              :ingredients
 
   def initialize(name)
     @name = name
@@ -14,6 +15,11 @@ class Recipe
     else
       ingredients_required[ingredient] + amount = amount
     end
+
+  end
+
+  def ingredients
+    self.ingredients_required.keys
   end
 
 end
