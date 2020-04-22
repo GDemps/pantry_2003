@@ -14,7 +14,7 @@ class StockTest < Minitest::Test
 
   def test_restock
     pantry = Pantry.new
-    ingredient2 = Ingredient.new("Macaroni", "oz", 200)
+    ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
     pantry.restock(ingredient2, 7)
     assert_equal 7, pantry.stock_check(ingredient2)
   end
